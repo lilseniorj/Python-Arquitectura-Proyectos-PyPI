@@ -10,3 +10,7 @@ class Article:
     title: str
     description: str
     url: str
+
+    """You can add more fields like 'published_at', 'author', etc. if needed
+    asdasd
+    """
