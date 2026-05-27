@@ -25,7 +25,13 @@ class Settings(BaseSettings):
     sentry_dsn: str | None = Field(None, description="Sentry DSN")
     max_articles: int = Field(10, description="Maximum number of articles to fetch")
     request_timeout: int = Field(10, description="Timeout for API requests in seconds")
-    openai_model: str = Field("gpt-4", description="OpenAI model to use for analysis")
+    openai_model: str = Field(
+        "gemini-2.5-flash", description="Model to use for analysis"
+    )
+    openai_base_url: str = Field(
+        "https://generativelanguage.googleapis.com/v1beta/openai/",
+        description="Base URL for the OpenAI-compatible API (Gemini by default)",
+    )
     openai_max_tokens: int = Field(
         500, description="Maximum tokens for OpenAI response"
     )

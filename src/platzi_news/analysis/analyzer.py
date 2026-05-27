@@ -27,7 +27,7 @@ class OpenAIAnalyzer:
         Args:
             api_key: The OpenAI API key for authentication.
         """
-        self.client = OpenAI(api_key=api_key)
+        self.client = OpenAI(api_key=api_key, base_url=settings.openai_base_url)
 
     def analyze(self, articles: list[Article], question: str) -> str:
         """Analyze articles and answer the question.
