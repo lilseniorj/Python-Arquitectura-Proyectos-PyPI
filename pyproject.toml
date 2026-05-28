@@ -25,6 +25,7 @@ platzi-news = "platzi_news.main:main"
 dev = [
     "lxml>=6.0.2",
     "mypy>=1.18.2",
+    "platzi-news",
     "pre-commit>=4.3.0",
     "pytest>=8.4.2",
     "pytest-cov>=7.0.0",
@@ -89,3 +90,6 @@ name = "testpypi"
 url = "https://test.pypi.org/simple/"
 publish-url = "https://test.pypi.org/legacy/"
 explicit = true
+
+[tool.uv.sources]
+platzi-news = { workspace = true }

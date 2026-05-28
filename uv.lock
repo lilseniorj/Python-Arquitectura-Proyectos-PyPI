@@ -471,6 +471,7 @@ dependencies = [
 dev = [
     { name = "lxml" },
     { name = "mypy" },
+    { name = "platzi-news" },
     { name = "pre-commit" },
     { name = "pytest" },
     { name = "pytest-cov" },
@@ -496,6 +497,7 @@ requires-dist = [
 dev = [
     { name = "lxml", specifier = ">=6.0.2" },
     { name = "mypy", specifier = ">=1.18.2" },
+    { name = "platzi-news", editable = "." },
     { name = "pre-commit", specifier = ">=4.3.0" },
     { name = "pytest", specifier = ">=8.4.2" },
     { name = "pytest-cov", specifier = ">=7.0.0" },
