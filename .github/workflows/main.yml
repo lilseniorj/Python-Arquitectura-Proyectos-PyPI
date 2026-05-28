@@ -1,10 +1,6 @@
 name: Code Style
 
-on:
-  push:
-    branches: [ main, develop ]
-  pull_request:
-    branches: [ main ]
+on: [ push, pull_request ]
 
 jobs:
   uv:
@@ -21,7 +17,7 @@ jobs:
         run: uv run ruff check
 
       - name: ruff format
-        run: uv run ruff format
+        run: uv run ruff format --check
 
       - name: mypy
         run: uv run mypy src
